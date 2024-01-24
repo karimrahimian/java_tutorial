@@ -1,0 +1,26 @@
+server:
+  port: 9000
+
+# mongo db configuration
+spring:
+  data:
+    mongodb:
+      database: cbioportal
+      username: root
+      password: rootpassword
+      host: localhost
+      port: 27017
+
+  # relational database configuration
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+    datasource:
+      url: jdbc:postgresql://192.168.1.48::5432/cbioportal
+      username: postgres
+      password: 123456
+      driver-class-name: org.postgresql.Driver
+
